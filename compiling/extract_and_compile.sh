@@ -9,10 +9,10 @@ nthArg=$1
 tar xfz NthPrime.tgz
 
 #cd into newly created NthPrime directory
-cd NthPrime
+cd NthPrime || exit
 
 #Compile NthPrime program using gcc (preprocesses, compiles, and assembles) 
-gcc *.c -o NthPrime
+gcc ./*.c -o NthPrime
 
 #Call the NthPrime program and passes it the arguement passed when calling the extract_and_compile function
-NthPrime $nthArg
+./NthPrime "$nthArg"
